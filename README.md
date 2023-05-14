@@ -38,7 +38,6 @@ Finally, Predi's reporting system is designed to allow doctors to access and ver
 2. Regular users who wish to monitor their health continuously and receive prompt assistance for any health-related issues they may encounter.
 3. Regular users who aim to establish a connection with their doctor outside of the hospital.
 
-
 ### Dataset:
 
 
@@ -63,9 +62,6 @@ To get the project running, there's a few programs and steps needed.
 
 ### Prerequisites:
 
-1. A C++ compiler such as GCC or Clang should be installed on your system.
-2. A text editor or Integrated Development Environment (IDE) to edit and run the code. Ex: Visual Studio Code, Sublime Text, or Code::Blocks.
-3. The standard C++ library should be available on your system, since the code uses C++ library headers,  which include <limits>, <vector>, <iostream>, and <fstream>.
 
 ### Steps to run the code:
 
@@ -74,6 +70,7 @@ To get the project running, there's a few programs and steps needed.
 To do that, simply press on the zip file, then press "view raw" as shown below to download it:
 ![image](https://github.com/SaliElloh/dijkstra-s-algorithm/assets/112829375/01584c60-8d92-489e-b834-d8f05f16fe90)
 
+# Challenges
 
 
 <!-- LICENSE -->
