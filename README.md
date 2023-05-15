@@ -7,9 +7,6 @@ A real-time diagnostic and predictive application that collects and evaluates da
 
 ## About The Project:
 
-### Background Terminology: 
-
-
 ### Introduction:
 
 In America alone, 12 million people are impacted by misdiagnosis errors. This can be caused by human error, outdated treatment practices, or a knowledge gap between a patient and their doctor. Doctors may prescribe medication or advise patients without having knowledge of their daily routines, leading to uncertainty about whether their instructions have been followed.
@@ -38,39 +35,116 @@ Finally, Predi's reporting system is designed to allow doctors to access and ver
 2. Regular users who wish to monitor their health continuously and receive prompt assistance for any health-related issues they may encounter.
 3. Regular users who aim to establish a connection with their doctor outside of the hospital.
 
-### Dataset:
-
-
-### Algorithm explained:
-
-
 ## Getting Started:
 
 To get the project running, there's a few programs and steps needed.
 
 ### Built With:
 
-* Python: the primary programming language used for the backend development of the app
-* Flask: a lightweight web framework used for developing the RESTful API 
-* TensorFlow: an open-source machine learning framework used for building the predictive model 
-* Keras: a high-level neural networks API used for building and training the predictive model 
-* SQLite: a lightweight relational database management system used for storing user data and health records 
-* React Native: a cross-platform mobile application framework used for developing the frontend of the app 
-* Expo: a set of tools and services used for building, deploying, and managing the React Native app
-* Fitbit API: an API used for collecting health data from the user's Fitbit device
-* Google Cloud Platform: a cloud computing platform used for hosting the app and storing user data
+* <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white">
+* <img src="https://img.shields.io/badge/-Flutter-02569B?style=flat&logo=flutter&logoColor=white">
+* <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
+* <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat&logo=redis&logoColor=white">
+* <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white">
 
 ### Prerequisites:
 
+* A computer with a supported operating system (Windows, macOS, or Linux)
+* Flutter SDK
+* Integrated development environment (IDE) 
+* Android SDK or Xcode (Android or iOS)
+* A device or emulator to test the app on
+* Basic knowledge of programming concepts and the Dart programming language.
+
+### System Design
+
+To simplify and allocate dedicated resources to the system, it was divied into four distinct components: 
+
+1. Front-end (mobile app)
+2. Back-end (controller)
+3. AI model
+4. Database
+
+The controller and AI model were further separated into two distinct components to minimize complexity. They can communicate with each other only through a message broker.
 
 ### Steps to run the code:
 
  Download the "predi-health-app" zip file found in the uploaded files.
  
 To do that, simply press on the zip file, then press "view raw" as shown below to download it:
-![image](https://github.com/SaliElloh/dijkstra-s-algorithm/assets/112829375/01584c60-8d92-489e-b834-d8f05f16fe90)
 
-# Challenges
+![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/d2292731-c6a6-4f65-ae87-51a248e1124f)
+
+# User Stories:
+
+The table below outlines the app's objectives and the corresponding achievements:
+
+<table>
+  <tr>
+    <th>As an...</th>
+    <th>I want to...</th>
+    <th>So that...</th>
+  </tr>
+  <tr>
+    <td>Doctor</td>
+    <td>keep track of my patients drug intake</td>
+    <td>they are not prescribed drugs that could have negative interactions</td>
+  </tr>
+  <tr>
+    <td>Doctor</td>
+    <td>monitor my patients possible negative interactions</td>
+    <td>so that I can warn them correctly</td>
+  </tr>
+  <tr>
+    <td>New user</td>
+    <td>create an account on the app and link with my Fitbit watch</td>
+    <td>I can track my health through the app</td>
+  </tr>
+  <tr>
+    <td>Regular user</td>
+    <td>link my account with my Google account</td>
+    <td>The app can access my search history</td>
+  </tr>
+  <tr>
+    <td>Regular user</td>
+    <td>get suggestions based on my search history and Fitbit data</td>
+    <td>I can get suggestions on what's the best course of action</td>
+  </tr>
+  <tr>
+    <td>Doctor</td>
+    <td>view my patient's search history and Fitbit data</td>
+    <td>I can correlate it with their health record</td>
+  </tr>
+  <tr>
+    <td>Doctor</td>
+    <td>get notified if one of my patients has a serious accident</td>
+    <td>I can assist them at the earliest</td>
+  </tr>
+  <tr>
+    <td>Regular user</td>
+    <td>use the app to Google my symptoms</td>
+    <td>The app sends warnings of serious health issues to my assigned doctor</td>
+  </tr>
+  <tr>
+    <td>Doctor</td>
+    <td>be able to validate or deny the serious warnings</td>
+    <td>My assigned patient can receive only the valid warnings</td>
+  </tr>
+  <tr>
+    <td>Regular user</td>
+    <td>have access to a set of articles</td>
+    <td>Can have an idea about the app's diagnosis</td>
+  </tr>
+  <tr>
+    <td>Regular user</td>
+    <td>get suggestions based on my search history and Fitbit data</td>
+    <td>I can get suggestions on what's the best course of action</td>
+  </tr>
+</table>
+
+### Screen shots from demo
+
+![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/21cbba24-2782-4043-98ef-e8c9e16e213b)
 
 
 <!-- LICENSE -->
