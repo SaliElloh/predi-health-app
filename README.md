@@ -1,5 +1,7 @@
 # predi-health-app
-A real-time diagnostic and predictive application that collects and evaluates data from your Fitbit watchFor more information about me, please visit my LinkedIn:
+A real-time diagnostic and predictive application that collects and evaluates data from your Fitbit watch.
+
+For more information about me, please visit my LinkedIn:
 
 [![LinkedIn][LinkedIn.js]][LinkedIn-url]
 
@@ -9,31 +11,23 @@ A real-time diagnostic and predictive application that collects and evaluates da
 
 ### Introduction:
 
-In America alone, 12 million people are impacted by misdiagnosis errors. This can be caused by human error, outdated treatment practices, or a knowledge gap between a patient and their doctor. Doctors may prescribe medication or advise patients without having knowledge of their daily routines, leading to uncertainty about whether their instructions have been followed.
+12 million Americans are affected by misdiagnosis errors, often caused by factors such as human error and knowledge gaps. To address this issue, we recognized the potential of smartphones and smartwatches, which are widely used and can collect valuable health data such as heart rate, breathing rate, sleep patterns, and blood pressure. This led us to create Predi, a live diagnostics mobile application that aims to improve communication between doctors and patients. Predi provides:
 
-Fortunately, 84% of Americans own smartphones and 45% regularly use smartwatches like Apple Watches and Fitbits, which can provide unique insights into a user's health data. Our team recognized the potential of this data to improve the diagnostic process in America and beyond. This led us to create Predi, a live diagnostics and predictive app that aims to bridge the gap between doctors and their patients.
-
-The app offers three main functions to enhance communication between patients and their doctors. 
-
-1. It provides real-time reporting of health-related data, including Fitbit data and user search queries, directly to the patient's doctor.
-2. Users can search the app for any symptoms they are experiencing, and the app can report these searches to the doctor with informed guesses on potential causes.
-3. The app can track the user's Fitbit health data to identify any trends or information in their health records that may not be immediately apparent to their doctor.
+1. Real-time reporting of health data,
+2. Allows users to search for symptoms, 
+3. and tracks Fitbit data to identify trends and potential issues that may be missed by doctors.
 
 ### How is it different?
 
-Predi sets itself apart from current technology in several key ways. First, it offers a more personalized approach to symptom identification. While traditional methods rely on manual input of symptoms into a search bar, Predi leverages user search queries and Fitbit data to make more informed decisions about what a user might be experiencing.
+Predi is different from other technology in several ways: 
 
-Second, Predi is highly accessible and affordable. Users only need a smartphone and smartwatch to record, monitor, and report their health data, eliminating the need for expensive or complicated technologies.
+1. it uses user search queries and Fitbit data for more personalized symptom identification.
+2. It is accessible and affordable with only a smartphone and smartwatch needed.
+3. It continuously monitors and analyzes health data for a more comprehensive understanding of a user's health status over time, and provides a reliable reporting system for doctors to verify patient data.
 
-Third, while the accuracy of data collected by smartwatches may vary, Predi's continuous monitoring and analysis of a user's health data helps bridge the knowledge gap between patients and doctors, providing doctors with a more comprehensive understanding of their patients' health status over time.
+### Who Does it Serve: 
 
-Finally, Predi's reporting system is designed to allow doctors to access and verify patient data. Unlike other apps that simply make guesses about a user's symptoms, Predi enables doctors to review and confirm the app's findings, providing a more reliable and trustworthy source of health information.
-
-<b> Group of people it serves: </b>
-
-1. Doctors who want a more comprehensive understanding of their patients' health and a faster, more accurate diagnosis of their conditions.
-2. Regular users who wish to monitor their health continuously and receive prompt assistance for any health-related issues they may encounter.
-3. Regular users who aim to establish a connection with their doctor outside of the hospital.
+Predi serves doctors who want a faster and more accurate diagnosis, regular users who want continuous health monitoring and assistance, and those who want to connect with their doctor outside of the hospital.
 
 ## Getting Started:
 
@@ -69,13 +63,15 @@ The controller and AI model were further separated into two distinct components 
 
 ### Steps to run the code:
 
- Download the "predi-health-app" zip file found in the uploaded files.
+Download the "predi-health-app" zip file found in the uploaded files.
  
 To do that, simply press on the zip file, then press "view raw" as shown below to download it:
 
 ![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/d2292731-c6a6-4f65-ae87-51a248e1124f)
 
-# User Stories:
+## Demo:
+
+### User Stories: 
 
 The table below outlines the app's objectives and the corresponding achievements:
 
@@ -142,10 +138,34 @@ The table below outlines the app's objectives and the corresponding achievements
   </tr>
 </table>
 
-### Screen shots from demo
 
-![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/21cbba24-2782-4043-98ef-e8c9e16e213b)
+### Screen shots from Demo:
 
+To gain a clearer picture of the app's functionality, take a look at these screenshots showcasing it in different scenarios:
+
+<b> a. Scenario 1: Signing into your account </b>
+
+To get started, you need to sign up/log into the app with your email address. If you want to sync your fitbit watch, you need to log in with the email address associated with your fitbit watch. 
+
+![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/f261c4f1-770c-483f-bdc7-db98f4ac7273)
+
+<b> b. Scenario 2: Doctor Monitering Patient's Drug Intake </b>
+
+Say your doctor, Steve Jobs, has prescribed you certain medications that you have to take on a a time schedule. With the app, you can easily keep track of your medication schedule. The app logs the time you take your medication and automatically reports it to your doctor. 
+
+![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/7de18583-d068-4021-8da1-9140a19f3c14)
+
+<b> c. Scenario 3: Beverly Hills Plastic Surgeon </b>
+
+Dr Todd a famous plastic surgeon in LA wants to check his patient Kim Kardashian's health search history to monitor her condition: 
+
+![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/5a783f30-6038-4ff9-bb4b-3a0706db0d7b)
+
+<b> c. Scenario 4: App Informed Decision Making: </b>
+
+The app uses your search history to make informed decisions on your symptoms, which are reported to your doctor for validation.
+
+![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/b9128a69-4adb-46c1-8bec-999816c689c9)
 
 <!-- LICENSE -->
 ## License:
@@ -160,7 +180,7 @@ Sali E-loh - [@Sali El-loh](https://www.linkedin.com/in/salielloh12/) - ellohsal
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments:
 
-* Special thanks to Professor Jin Lu at the University of Michigan - Dearborn for assigning and helping with this project in his Algorithm Analysis and Design class. 
+* I would like to extend my gratitude to my fellow classmates who worked diligently alongside me on this project during our CIS 553 Software Engineering course: Amine Dakhli (Aminedak@umich.edu), Alaa Houerbi (houerbi@umich.edu), and Matthew Bryce (mdbryce@umich.edu)."
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
