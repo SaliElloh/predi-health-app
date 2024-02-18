@@ -1,10 +1,3 @@
-### Introduction:
-
-For more information about me, please visit my LinkedIn:
-
-[![LinkedIn][LinkedIn.js]][LinkedIn-url]
-
-
 ## Description:
 This repository contains Jupyter notebooks for analyzing emotions in conversations using natural language processing techniques. The project is part of SemEval 2024 Task 3: The Competition of Multimodal Emotion Cause Analysis in Conversations.
 
@@ -47,7 +40,6 @@ Experiment with different models, preprocessing techniques, and feature engineer
 ### Note:
 
 Future work involves integrating text, audio, and potentially video data for multimodal emotion recognition.
-
 
 ### Built With:
 
