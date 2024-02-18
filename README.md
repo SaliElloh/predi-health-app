@@ -34,9 +34,11 @@ To get the project running, there's a few programs and steps needed.
 
 ### Built With:
 
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+* <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white">
+* <img src="https://img.shields.io/badge/-Flutter-02569B?style=flat&logo=flutter&logoColor=white">
+* <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
+* <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat&logo=redis&logoColor=white">
+* <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white">
 
 ### Prerequisites:
 
