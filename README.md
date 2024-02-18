@@ -1,7 +1,4 @@
-# Multimodal-Emotion-Cause-Analysis-in-Conversation
-SemEval 2024 Task 3 Subtask 2 project focusing on emotion recognition in conversations using text and audio data
-
-A real-time diagnostic and predictive application that collects and evaluates data from your Fitbit watch.
+#predi-health-app
 
 For more information about me, please visit my LinkedIn:
 
@@ -186,3 +183,6 @@ Sali E-loh - [@Sali El-loh](https://www.linkedin.com/in/salielloh12/) - ellohsal
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [LinkedIn.js]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [LinkedIn-url]: https://www.linkedin.com/in/salielloh12/
+
+
+
