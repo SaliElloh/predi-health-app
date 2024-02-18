@@ -27,8 +27,6 @@ This repository contains Jupyter notebooks for analyzing emotions in conversatio
 ## Instructions:
 
 Run each notebook individually to understand the specific analysis and implementation.
-Ensure all necessary libraries and dependencies are installed before running the notebooks.
-Experiment with different models, preprocessing techniques, and feature engineering methods to improve performance.
 
 ## Contributors:
 * Anika Raisa-Chowdhury
