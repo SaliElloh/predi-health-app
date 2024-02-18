@@ -1,38 +1,11 @@
-# predi-health-app
-A real-time diagnostic and predictive application that collects and evaluates data from your Fitbit watch.
+### Introduction:
 
 For more information about me, please visit my LinkedIn:
 
 [![LinkedIn][LinkedIn.js]][LinkedIn-url]
 
-<!-- ABOUT THE PROJECT -->
 
-## About The Project:
-
-### Introduction:
-
-
-## Getting Started:
-
-To get the project running, there's a few programs and steps needed.
-
-### Built With:
-
-* <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white">
-* <img src="https://img.shields.io/badge/-Flutter-02569B?style=flat&logo=flutter&logoColor=white">
-* <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
-* <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat&logo=redis&logoColor=white">
-* <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white">
-
-
-## Demo:
-
-<!-- CONTACT -->
-## Contact:
-
-Sali E-loh - [@Sali El-loh](https://www.linkedin.com/in/salielloh12/) - ellohsali@gmail.com
-
-# Description:
+## Description:
 This repository contains Jupyter notebooks for analyzing emotions in conversations using natural language processing techniques. The project is part of SemEval 2024 Task 3: The Competition of Multimodal Emotion Cause Analysis in Conversations.
 
 ## Files:
@@ -58,13 +31,13 @@ This repository contains Jupyter notebooks for analyzing emotions in conversatio
 * Provides a starting point for comparing the performance of more advanced models implemented in other notebooks.
 * Contains essential preprocessing steps and data visualization techniques for understanding the dataset.
 * 
-### Instructions:
+## Instructions:
 
 Run each notebook individually to understand the specific analysis and implementation.
 Ensure all necessary libraries and dependencies are installed before running the notebooks.
 Experiment with different models, preprocessing techniques, and feature engineering methods to improve performance.
 
-### Contributors:
+## Contributors:
 * Anika Raisa-Chowdhury
 * Tanvi Shah
 * Sali El-Loh
@@ -76,6 +49,17 @@ Experiment with different models, preprocessing techniques, and feature engineer
 Future work involves integrating text, audio, and potentially video data for multimodal emotion recognition.
 
 
+### Built With:
+
+* <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white">
+* <img src="https://img.shields.io/badge/-Flutter-02569B?style=flat&logo=flutter&logoColor=white">
+* <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
+* <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat&logo=redis&logoColor=white">
+* <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white">
+
+### Contact:
+
+Sali E-loh - [@Sali El-loh](https://www.linkedin.com/in/salielloh12/) - ellohsali@gmail.com
 
 
 
