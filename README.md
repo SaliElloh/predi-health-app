@@ -1,190 +1,200 @@
-# predi-health-app
+# Predi — Predictive Health Application 🏥📱
 
-For more information about me, please visit my LinkedIn:
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)](https://tensorflow.org)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)](https://redis.io)
+[![University of Michigan](https://img.shields.io/badge/UMich-00274C?style=flat)](https://umich.edu)
 
-[![LinkedIn][LinkedIn.js]][LinkedIn-url]
+> **CIS 553 — Software Engineering**  
+> University of Michigan, Dearborn | Summer 2024
 
-<!-- ABOUT THE PROJECT -->
+---
 
-## About The Project:
+## Overview
 
-### Introduction:
+**12 million Americans are misdiagnosed annually** — often due to human error and knowledge gaps between patients and their doctors. Predi is a cross-platform mobile health application that bridges this gap by combining real-time biometric monitoring with AI-driven symptom analysis to give both patients and doctors a continuous, data-backed picture of patient health.
 
-12 million Americans are affected by misdiagnosis errors, often caused by factors such as human error and knowledge gaps. To address this issue, we recognized the potential of smartphones and smartwatches, which are widely used and can collect valuable health data such as heart rate, breathing rate, sleep patterns, and blood pressure. This led us to create Predi, a live diagnostics mobile application that aims to improve communication between doctors and patients. Predi provides:
+Predi streams live health data from Fitbit wearables (heart rate, SpO₂, activity, sleep patterns) and uses NLP to analyze user-reported symptoms — flagging potential health risks and automatically notifying assigned physicians when serious patterns are detected.
 
-1. Real-time reporting of health data,
-2. Allows users to search for symptoms, 
-3. and tracks Fitbit data to identify trends and potential issues that may be missed by doctors.
+---
 
-### How is it different?
+## Key Features
 
-Predi is different from other technology in several ways: 
+| Feature | Description |
+|---|---|
+| Real-time biometric streaming | Live heart rate, SpO₂, and activity data via Fitbit API |
+| AI symptom analysis | NLP-powered symptom search with risk flagging |
+| Doctor-patient communication | Secure, HIPAA-conscious messaging via Firebase Auth |
+| Medication tracking | Logs drug intake and reports to doctor in real time |
+| Health trend detection | Identifies patterns over time that may be missed in single visits |
+| Alert system | Notifies doctors when a patient's data crosses clinical thresholds |
 
-1. it uses user search queries and Fitbit data for more personalized symptom identification.
-2. It is accessible and affordable with only a smartphone and smartwatch needed.
-3. It continuously monitors and analyzes health data for a more comprehensive understanding of a user's health status over time, and provides a reliable reporting system for doctors to verify patient data.
+---
 
-### Who Does it Serve: 
+## System Architecture
 
-Predi serves doctors who want a faster and more accurate diagnosis, regular users who want continuous health monitoring and assistance, and those who want to connect with their doctor outside of the hospital.
+The system is split into four decoupled components to ensure scalability and separation of concerns. The AI model and backend controller communicate exclusively through a **message broker** to minimize interdependency.
 
-## Getting Started:
+```
+┌─────────────────────────────────────────────┐
+│              Flutter Mobile App             │  ← Frontend
+│      (iOS / Android cross-platform)         │
+└────────────────────┬────────────────────────┘
+                     │ REST API
+┌────────────────────▼────────────────────────┐
+│           FastAPI Backend Controller        │  ← Controller
+│              (Python + Redis)               │
+└──────────┬─────────────────────┬────────────┘
+           │ Message Broker      │
+┌──────────▼──────────┐ ┌───────▼────────────┐
+│     AI / ML Model   │ │  Firebase Database  │  ← AI + DB
+│  (TensorFlow + NLP) │ │  (Auth + Firestore) │
+└─────────────────────┘ └────────────────────┘
+           ↑
+    Fitbit API
+  (Heart rate, SpO₂,
+   activity, sleep)
+```
 
-To get the project running, there's a few programs and steps needed.
+---
 
-### Built With:
+## Who It Serves
 
-* <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white">
-* <img src="https://img.shields.io/badge/-Flutter-02569B?style=flat&logo=flutter&logoColor=white">
-* <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white">
-* <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat&logo=redis&logoColor=white">
-* <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white">
+| User | Need | How Predi Helps |
+|---|---|---|
+| Patients | Continuous health monitoring | Streams real Fitbit data + flags anomalies automatically |
+| Doctors | Data-backed diagnosis support | Dashboard of patient vitals, symptoms, and trend history |
+| Both | Asynchronous communication | Secure doctor-patient messaging outside hospital visits |
 
-### Prerequisites:
+---
 
-* A computer with a supported operating system (Windows, macOS, or Linux)
-* Flutter SDK
-* Integrated development environment (IDE) 
-* Android SDK or Xcode (Android or iOS)
-* A device or emulator to test the app on
-* Basic knowledge of programming concepts and the Dart programming language.
+## Tech Stack
 
-### System Design
+| Layer | Technology |
+|---|---|
+| Mobile frontend | Flutter (Dart) — iOS and Android |
+| Backend API | FastAPI (Python) |
+| Caching / message broker | Redis |
+| AI / ML | TensorFlow, NLP (symptom analysis) |
+| Database | Firebase Firestore |
+| Authentication | Firebase Auth |
+| Wearable integration | Fitbit API |
 
-To simplify and allocate dedicated resources to the system, it was divied into four distinct components: 
+---
 
-1. Front-end (mobile app)
-2. Back-end (controller)
-3. AI model
-4. Database
+## Getting Started
 
-The controller and AI model were further separated into two distinct components to minimize complexity. They can communicate with each other only through a message broker.
+### Prerequisites
 
-### Steps to run the code:
+**Backend:**
+```bash
+pip install fastapi uvicorn tensorflow redis firebase-admin fitbit requests
+```
 
-Download the "predi-health-app" zip file found in the uploaded files.
- 
-To do that, simply press on the zip file, then press "view raw" as shown below to download it:
+**Frontend:**
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (v3.0+)
+- Android SDK or Xcode (for Android/iOS builds)
+- A physical device or emulator
 
-![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/d2292731-c6a6-4f65-ae87-51a248e1124f)
+### Run the backend
 
-## Demo:
+```bash
+# Clone the repository
+git clone https://github.com/SaliElloh/predi-health-app
+cd predi-health-app
 
-### User Stories: 
+# Start Redis (required for message broker)
+redis-server
 
-The table below outlines the app's objectives and the corresponding achievements:
+# Start the FastAPI backend
+uvicorn main:app --reload
+```
 
-<table>
-  <tr>
-    <th>As an...</th>
-    <th>I want to...</th>
-    <th>So that...</th>
-  </tr>
-  <tr>
-    <td>Doctor</td>
-    <td>keep track of my patients drug intake</td>
-    <td>they are not prescribed drugs that could have negative interactions</td>
-  </tr>
-  <tr>
-    <td>Doctor</td>
-    <td>monitor my patients possible negative interactions</td>
-    <td>so that I can warn them correctly</td>
-  </tr>
-  <tr>
-    <td>New user</td>
-    <td>create an account on the app and link with my Fitbit watch</td>
-    <td>I can track my health through the app</td>
-  </tr>
-  <tr>
-    <td>Regular user</td>
-    <td>link my account with my Google account</td>
-    <td>The app can access my search history</td>
-  </tr>
-  <tr>
-    <td>Regular user</td>
-    <td>get suggestions based on my search history and Fitbit data</td>
-    <td>I can get suggestions on what's the best course of action</td>
-  </tr>
-  <tr>
-    <td>Doctor</td>
-    <td>view my patient's search history and Fitbit data</td>
-    <td>I can correlate it with their health record</td>
-  </tr>
-  <tr>
-    <td>Doctor</td>
-    <td>get notified if one of my patients has a serious accident</td>
-    <td>I can assist them at the earliest</td>
-  </tr>
-  <tr>
-    <td>Regular user</td>
-    <td>use the app to Google my symptoms</td>
-    <td>The app sends warnings of serious health issues to my assigned doctor</td>
-  </tr>
-  <tr>
-    <td>Doctor</td>
-    <td>be able to validate or deny the serious warnings</td>
-    <td>My assigned patient can receive only the valid warnings</td>
-  </tr>
-  <tr>
-    <td>Regular user</td>
-    <td>have access to a set of articles</td>
-    <td>Can have an idea about the app's diagnosis</td>
-  </tr>
-  <tr>
-    <td>Regular user</td>
-    <td>get suggestions based on my search history and Fitbit data</td>
-    <td>I can get suggestions on what's the best course of action</td>
-  </tr>
-</table>
+### Run the mobile app
 
+```bash
+# Navigate to Flutter project directory
+cd mobile
 
-### Screen shots from Demo:
+# Install Flutter dependencies
+flutter pub get
 
-To gain a clearer picture of the app's functionality, take a look at these screenshots showcasing it in different scenarios:
+# Run on connected device or emulator
+flutter run
+```
 
-<b> a. Scenario 1: Signing into your account </b>
+> **Note:** You will need a Firebase project with Firestore and Auth enabled, and a Fitbit developer account to generate API credentials. Add your credentials to the `.env` file before running.
 
-To get started, you need to sign up/log into the app with your email address. If you want to sync your fitbit watch, you need to log in with the email address associated with your fitbit watch. 
+---
 
-![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/f261c4f1-770c-483f-bdc7-db98f4ac7273)
+## Demo
 
-<b> b. Scenario 2: Doctor Monitering Patient's Drug Intake </b>
+### User Stories
 
-Say your doctor, Steve Jobs, has prescribed you certain medications that you have to take on a a time schedule. With the app, you can easily keep track of your medication schedule. The app logs the time you take your medication and automatically reports it to your doctor. 
+| As a... | I want to... | So that... |
+|---|---|---|
+| Doctor | Monitor my patient's medication schedule | I can prevent harmful drug interactions |
+| Doctor | Receive alerts when patient health deteriorates | I can respond at the earliest possible moment |
+| Doctor | View patient symptom search history + Fitbit data | I can correlate behavior with their health record |
+| Doctor | Validate or dismiss AI-generated health warnings | Only clinically relevant alerts reach the patient |
+| Patient | Link my Fitbit and stream real-time vitals | My health is continuously monitored, not just at appointments |
+| Patient | Search symptoms and get AI-powered suggestions | I understand potential risks before seeing a doctor |
+| Patient | Log my medication intake | My doctor always has an accurate record |
 
-![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/7de18583-d068-4021-8da1-9140a19f3c14)
+### App Screenshots
 
-<b> c. Scenario 3: Beverly Hills Plastic Surgeon </b>
+**Scenario 1 — Account creation and Fitbit sync**
 
-Dr Todd a famous plastic surgeon in LA wants to check his patient Kim Kardashian's health search history to monitor her condition: 
+Sign up with your email and link your Fitbit account to begin streaming live biometric data.
 
-![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/5a783f30-6038-4ff9-bb4b-3a0706db0d7b)
+![Sign in](https://github.com/SaliElloh/predi-health-app/assets/112829375/f261c4f1-770c-483f-bdc7-db98f4ac7273)
 
-<b> c. Scenario 4: App Informed Decision Making: </b>
+**Scenario 2 — Doctor monitoring patient medication intake**
 
-The app uses your search history to make informed decisions on your symptoms, which are reported to your doctor for validation.
+Doctors can view a patient's medication log in real time, with timestamps automatically recorded each time the patient logs a dose.
 
-![image](https://github.com/SaliElloh/predi-health-app/assets/112829375/b9128a69-4adb-46c1-8bec-999816c689c9)
+![Medication tracking](https://github.com/SaliElloh/predi-health-app/assets/112829375/7de18583-d068-4021-8da1-9140a19f3c14)
 
-<!-- LICENSE -->
-## License:
+**Scenario 3 — Doctor viewing patient health history**
 
-No License used.
+Physicians can review a patient's symptom search history and Fitbit trend data side by side to inform diagnosis decisions.
 
-<!-- CONTACT -->
-## Contact:
+![Health history](https://github.com/SaliElloh/predi-health-app/assets/112829375/5a783f30-6038-4ff9-bb4b-3a0706db0d7b)
 
-Sali E-loh - [@Sali El-loh](https://www.linkedin.com/in/salielloh12/) - ellohsali@gmail.com
+**Scenario 4 — AI-informed decision making**
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments:
+The app analyzes symptom search patterns using NLP and surfaces potential health risks to the assigned doctor for validation.
 
-* I would like to extend my gratitude to my fellow classmates who worked diligently alongside me on this project during our CIS 553 Software Engineering course: Amine Dakhli (Aminedak@umich.edu), Alaa Houerbi (houerbi@umich.edu), and Matthew Bryce (mdbryce@umich.edu)."
+![AI analysis](https://github.com/SaliElloh/predi-health-app/assets/112829375/b9128a69-4adb-46c1-8bec-999816c689c9)
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[LinkedIn.js]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-[LinkedIn-url]: https://www.linkedin.com/in/salielloh12/
+---
 
+## Contributors
+
+| Name | Contributions |
+|---|---|
+| **Sali El-loh** | AI model integration, NLP pipeline, backend architecture, documentation |
+| Amine Dakhli | Frontend development, Flutter UI |
+| Alaa Houerbi | Firebase integration, authentication |
+| Matthew Bryce | Backend API, data pipeline |
+
+---
+
+## Author
+
+**Sali El-loh**  
+M.S. Artificial Intelligence | University of Michigan — Dearborn  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salielloh12/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/SaliElloh)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:selloh@umich.edu)
+
+---
+
+## License
+
+No license specified. Contact the author for usage permissions.
 
 
