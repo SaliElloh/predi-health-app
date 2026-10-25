@@ -1,0 +1,12 @@
+{
+  "model": "tfidf + logistic regression",
+  "best_params": {
+    "clf__C": "5",
+    "tfidf__ngram_range": "(1, 1)"
+  },
+  "cv_macro_f1": 0.9429,
+  "test_accuracy": 0.9434,
+  "test_macro_f1": 0.9427,
+  "test_top3_accuracy": 0.9953,
+  "test_train_exact_duplicates": 1
+}
